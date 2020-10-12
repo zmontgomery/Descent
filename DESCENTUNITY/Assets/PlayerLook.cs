@@ -11,16 +11,15 @@ public class PlayerLook : MonoBehaviour
 
     void Start()
     {
-
+        transform.localRotation = Quaternion.Euler(0, 0, 0);
     }
 
     void Update()
     {
 
-        MouseX += Input.GetAxis("Mouse X");
         MouseY += Input.GetAxis("Mouse Y");
 
-        transform.localRotation = Quaternion.Euler(-MouseY, MouseX, 0);
+        transform.localRotation = Quaternion.Euler(-MouseY, 0, 0);
 
     }
 
