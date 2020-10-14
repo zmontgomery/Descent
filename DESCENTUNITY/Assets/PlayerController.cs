@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public string preset = "Overwatch";
+    public string preset = "";
     private Vector3 playerVel;
     private bool playerGrounded = false;
     CapsuleCollider capc;

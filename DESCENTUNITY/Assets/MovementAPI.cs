@@ -127,7 +127,7 @@ public class MovementAPI : MonoBehaviour
     {
         if(preset == "OW"){
             playerspeed = 12.0f;
-            accel = 10f;
+            accel = 20f;
             airAccel = 0.1f;
             friction = 10f;
             airFriction = 0.07f;
