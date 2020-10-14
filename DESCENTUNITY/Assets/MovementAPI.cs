@@ -125,14 +125,41 @@ public class MovementAPI : MonoBehaviour
 
     public static Vector3 GetMovements(bool playerGrounded, string preset = "")
     {
-        if(preset == "Overwatch"){
-            playerspeed = 13.0f;
+        if(preset == "OW"){
+            playerspeed = 12.0f;
             accel = 10f;
             airAccel = 0.1f;
             friction = 10f;
             airFriction = 0.07f;
-            gravity = -10f;
-            jumpHeight = 3.6f;
+            gravity = -30f;
+            jumpHeight = 8f;
+        }
+        if(preset == "CSGO"){
+            playerspeed = 8f;
+            accel = 0.15f;
+            airAccel = 0.05f;
+            friction = 0.1f;
+            airFriction = 0.03f;
+            gravity = -20f;
+            jumpHeight = 7f;
+        }
+        if(preset == "FOF"){
+            playerspeed = 6f;
+            accel = 0.08f;
+            airAccel = 0.05f;
+            friction = 0.08f;
+            airFriction = 0.01f;
+            gravity = -9.81f;
+            jumpHeight = 4f;
+        }
+        if(preset == "MC"){
+            playerspeed = 5.5f;
+            accel = 0.3f;
+            airAccel = 0.08f;
+            friction = 0.2f;
+            airFriction = 0.05f;
+            gravity = -50f;
+            jumpHeight = 14f;
         }
 
         ykeyboard = Input.GetAxis("Vertical");
