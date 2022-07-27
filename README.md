@@ -1,2 +1,0 @@
-# Descent
-Descent FPS
