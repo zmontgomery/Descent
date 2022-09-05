@@ -5,7 +5,13 @@ public class Main {
 		
 		Server server = Server.getServer();
 		
-		System.out.print(server.getName());
-		
+		System.out.println(server.getName());
+
+		try {
+			server.start();
+		} catch(Exception e){
+			//squash
+		}
+
 	}
 }

@@ -3,12 +3,13 @@ package descent;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
-import java.net.SocketException;
 
 public class Main {
 	public static void main(String[] args) throws Exception {
 		DatagramSocket socket = new DatagramSocket();
-		DatagramPacket packet = new DatagramPacket(new byte[]{1}, 1, InetAddress.getByAddress(new byte[] { 66,66,83,160 }), 25565);
+		byte[] message = new String("You smell").getBytes();
+		DatagramPacket packet = new DatagramPacket(message, message.length, InetAddress.getByName("129.21.87.52"), 24569);
 		socket.send(packet);
+		socket.close();
 	}
 }
