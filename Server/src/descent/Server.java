@@ -68,13 +68,22 @@ public class Server {
 		} else if(code == 1){
 			//Chat protocol
 			String message = new String(Arrays.copyOfRange(data, 2, data.length));
-			broadcast(message);
+			int id = data[1];
+			broadcastPlayerMessage(id, message);
 		}
-
 	}
 
-	private void broadcast(String message){
-
+	private void broadcastPlayerMessage(int id, String message){
+		Player player = null;
+		for(Player p : onlinePlayers){
+			if(p.getId() == id){
+				player = p;
+				break;
+			}
+		}
+		if(player != null){
+			System.out.println("[" + player.getName() + "]: " + message);
+		}	
 	}
 
 	private void infoLog(String message){

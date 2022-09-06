@@ -21,7 +21,14 @@ public class Client {
         this.playerId = id;
     }
 
+    public int getPlayerId(){
+        return this.playerId;
+    }
+
     public static Client getClient(){
+        if(Client.client == null){
+            Client.client = new Client();
+        }
         return Client.client;
     }
 }
